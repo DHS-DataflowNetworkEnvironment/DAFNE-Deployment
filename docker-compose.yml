@@ -1,0 +1,60 @@
+version: "3.1"
+services:
+  fe:
+    image: "collaborativedhs/dafne:fe-1.0.4"
+    container_name: fe
+    hostname: frontend
+    restart: always
+    build: .
+    ports:
+      - "8080:80"
+    networks:
+      - dafne
+    volumes:
+      - /data/dafne/front-end/config:/usr/local/apache2/htdocs/assets/config
+    depends_on:
+      - be
+  be:
+    image: "collaborativedhs/dafne:be-1.0.3"
+    container_name: be
+    hostname: backend
+    restart: always
+    build: .
+    command: bash -c "npx sequelize-cli db:migrate && node index.js"
+
+    ports:
+      - "3000:2000"
+    environment:
+      - NODE_ENV=production               # {'development', 'test', 'production'}
+      - CONF_PATH=/usr/src/app/config/
+      - LOGS_PATH=/usr/src/app/logs/
+    networks:
+      - dafne
+    volumes:
+      # create a 'config' folder in the working dir and bind it to an external folder of the host, where the config.json file is located
+      - /data/dafne/back-end/config:/usr/src/app/config
+      # create a 'log' folder in the working dir and binds it to an external folder of the host, to make the logs persistent
+      - /data/dafne/back-end/logs:/usr/src/app/logs
+  # uncomment the following lines to use a dockerized image of the DAFNE database
+  #  depends_on:
+  #    - db
+  #db:
+  #  container_name: dafne_db
+  #  hostname: dafne_db
+  #  restart: always
+  #  image: "library/postgres:12.5"
+  #  env_file:
+  #    - /data/dafne/back-end/config/db_credentials.env
+  #  networks:
+  #    - dafne
+  #  ports:
+  #    - "5432:5432"
+  #  volumes:
+  #    - /data/dafne-db/:/var/lib/postgresql/data
+networks:
+    dafne:
+      driver: bridge
+      ipam:
+        driver: default
+        config:
+          - subnet: 172.16.0.0/16
