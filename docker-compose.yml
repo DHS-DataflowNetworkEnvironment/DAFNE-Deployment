@@ -15,7 +15,7 @@ services:
     depends_on:
       - be
   be:
-    image: "collaborativedhs/dafne:be-1.0.3"
+    image: "collaborativedhs/dafne:be-1.0.4"
     container_name: be
     hostname: backend
     restart: always
