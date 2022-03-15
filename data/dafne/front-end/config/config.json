@@ -1,102 +1,111 @@
 {
-    "centreBackupLogoPath": "assets/images/Logo_DAFNE_white.png",
-    "centreLogoPath": "",
-    "mapSettings": {
+  "centreBackupLogoPath": "assets/images/Logo_DAFNE_white.png",
+  "centreLogoPath": "",
+  "mapSettings": {
       "textSize": 12,
       "iconSize": 30
-    },
-    "apiUrl": "<back-end-url>",
-    "version": "1.0.4",
-    "satelliteList": [
+  },
+  "availabilityColors": [
+      {"threshold": 0.0, "color": "#ee0000"},
+      {"threshold": 75.0, "color": "#6d4400"},
+      {"threshold": 95.0, "color": "#373d00"},
+      {"threshold": 98.0, "color": "#185e00"},
+      {"threshold": 99.0, "color": "#00781d"},
+      {"threshold": 100.0, "color": "#00781d"}        
+  ],
+  "dataRefreshTime": 300000,
+  "apiUrl": "<back-end-url>",
+  "version": "1.1.0",
+  "satelliteList": [
       {
-        "name": "Sentinel-1",
-        "acronym": "S1",
-        "productType": [
-          "RAW",
-          "SLC",
-          "GRD",
-          "OCN"
-        ],
-        "platform": [
-          "A",
-          "B",
-          "A+B"
-        ]
+          "name": "Sentinel-1",
+          "acronym": "S1",
+          "productType": [
+              "RAW",
+              "SLC",
+              "GRD",
+              "OCN"
+          ],
+          "platform": [
+              "A",
+              "B",
+              "A+B"
+          ]
       },
       {
-        "name": "Sentinel-2",
-        "acronym": "S2",
-        "productType": [
-          "MSIL1C",
-          "MSIL2A"
-        ],
-        "platform": [
-          "A",
-          "B",
-          "A+B"
-        ]
+          "name": "Sentinel-2",
+          "acronym": "S2",
+          "productType": [
+              "MSIL1C",
+              "MSIL2A"
+          ],
+          "platform": [
+              "A",
+              "B",
+              "A+B"
+          ]
       },
       {
-        "name": "Sentinel-3",
-        "acronym": "S3",
-        "productType": [
-          "OL_1_EFR___",
-          "OL_1_ERR___",
-          "SL_1_RBT___",
-          "SR_1_SRA___",
-          "SR_1_SRA_A_",
-          "SR_1_SRA_BS",
-          "OL_2_LFR___",
-          "OL_2_LRR___",
-          "SL_2_LST___",
-          "SL_2_FRP___",
-          "SY_2_SYN___",
-          "SY_2_AOD___",
-          "SY_2_VGP___",
-          "SY_2_VG1___",
-          "SY_2_V10___",
-          "SR_2_LAN___"
-        ],
-        "platform": [
-          "A",
-          "B",
-          "A+B"
-        ]
+          "name": "Sentinel-3",
+          "acronym": "S3",
+          "productType": [
+              "OL_1_EFR___",
+              "OL_1_ERR___",
+              "SL_1_RBT___",
+              "SR_1_SRA___",
+              "SR_1_SRA_A_",
+              "SR_1_SRA_BS",
+              "OL_2_LFR___",
+              "OL_2_LRR___",
+              "SL_2_LST___",
+              "SL_2_FRP___",
+              "SY_2_SYN___",
+              "SY_2_AOD___",
+              "SY_2_VGP___",
+              "SY_2_VG1___",
+              "SY_2_V10___",
+              "SR_2_LAN___"            
+          ],
+          "platform": [
+              "A",
+              "B",
+              "A+B"
+          ]
       },
       {
-        "name": "Sentinel-5P",
-        "acronym": "S5P",
-        "productType": [
-          "L1B_RA_BD1",
-          "L1B_RA_BD2",
-          "L1B_RA_BD3",
-          "L1B_RA_BD4",
-          "L1B_RA_BD5",
-          "L1B_RA_BD6",
-          "L1B_RA_BD7",
-          "L1B_RA_BD8",
-          "L1B_IR_UVN",
-          "L1B_IR_SIR",
-          "L2__O3____",
-          "L2__O3_TCL",
-          "L2__O3__PR",
-          "L2__NO2___",
-          "L2__SO2___",
-          "L2__CO____",
-          "L2__CH4___",
-          "L2__HCHO__",
-          "L2__CLOUD_",
-          "L2__AER_AI",
-          "L2__AER_LH",
-          "L2__NP_BD3",
-          "L2__NP_BD6",
-          "L2__NP_BD7",
-          "AUX_CTMANA",
-          "AUX_CTMFCT"
-        ],
-        "platform": [
-          "---"
-        ]
+          "name": "Sentinel-5p",
+          "acronym": "S5P",
+          "productType": [
+              "L1B_RA_BD1",
+              "L1B_RA_BD2",
+              "L1B_RA_BD3",
+              "L1B_RA_BD4",
+              "L1B_RA_BD5",
+              "L1B_RA_BD6",
+              "L1B_RA_BD7",
+              "L1B_RA_BD8",
+              "L1B_IR_UVN",
+              "L1B_IR_SIR",
+              "L2__O3____",
+              "L2__O3_TCL",
+              "L2__O3__PR",
+              "L2__NO2___",
+              "L2__SO2___",
+              "L2__CO____",
+              "L2__CH4___",
+              "L2__HCHO__",
+              "L2__CLOUD_",
+              "L2__AER_AI",
+              "L2__AER_LH",
+              "L2__NP_BD3",
+              "L2__NP_BD6",
+              "L2__NP_BD7",
+              "AUX_CTMANA",
+              "AUX_CTMFCT"
+          ],
+          "platform": [
+              "---"
+          ]
       }
-    ]
-  }
+  ]
+}
