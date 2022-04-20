@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   fe:
-    image: "collaborativedhs/dafne:fe-1.1.0"
+    image: "collaborativedhs/dafne:fe-2.0.0"
     container_name: fe
     hostname: frontend
     restart: always
@@ -15,7 +15,7 @@ services:
     depends_on:
       - be
   be:
-    image: "collaborativedhs/dafne:be-1.1.0"
+    image: "collaborativedhs/dafne:be-2.0.0"
     container_name: be
     hostname: backend
     restart: always

@@ -9,9 +9,9 @@
     },
     "production": {
     	"username": "dafne",
-    	"password": "<password>",
+    	"password": "<PWD>",
     	"database": "dafne",
-    	"host": "<host>",
+    	"host": "localhost",
     	"port": "5432",
     	"dialect": "postgres",
     	"operatorsAliases": false
@@ -23,7 +23,7 @@
 		}
 	},
 	"auth": {
-		"keycloakBaseUrl": "https://<keycloak_url>/auth/realms/<realm_name>/protocol/openid-connect",
+		"keycloakBaseUrl": "https://<keycloak_url>/auth/realms/dhus/protocol/openid-connect",
 		"clientId": "dafne",
 		"grantType": "password"
 
@@ -35,9 +35,18 @@
 		"rollingPeriodInDays": 90,
 		"url": "odata/v1/Products?$top=1"
 	},
+	"latency": {
+		"schedule": "0 * * * *",
+		"enablePurge": true,
+		"purgeSchedule": "0 1 * * *",
+		"rollingPeriodInDays": 90,
+		"feRetrySchedule": "*/5 * * * *",
+		"feMaxRetry": 10,
+		"tolerance": 1
+	  },
 	"requestTimeout": 30000,
 	"dataSourceStatus": ["RUNNING", "PENDING"],
-	"version": "1.1.0",
-	"port": 2000,
+	"version": "2.0.0",
+        "port": 2000,
 	"adminRole": "DATAFLOW_MANAGER"
 }
