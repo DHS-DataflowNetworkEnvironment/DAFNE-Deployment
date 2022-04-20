@@ -11,7 +11,7 @@
     	"username": "dafne",
     	"password": "<PWD>",
     	"database": "dafne",
-    	"host": "localhost",
+    	"host": "<host>",
     	"port": "5432",
     	"dialect": "postgres",
     	"operatorsAliases": false
