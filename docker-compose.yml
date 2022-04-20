@@ -13,7 +13,7 @@ services:
     volumes:
       - /data/dafne/front-end/config:/usr/local/apache2/htdocs/assets/config
       # uncomment the following line in case of deployment without proxy
-      #- /data/dafne/front-end/config/index.html:/usr/local/apache2/htdocs/index.html
+      #- /data/dafne/front-end/html/index.html:/usr/local/apache2/htdocs/index.html
     depends_on:
       - be
   be:
