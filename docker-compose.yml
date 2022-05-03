@@ -41,7 +41,7 @@ services:
   #  depends_on:
   #    - db
   #db:
-  #  container_name: dafne_db
+  #  container_name: db
   #  hostname: dafne_db
   #  restart: always
   #  image: "library/postgres:12.5"
