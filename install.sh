@@ -14,7 +14,7 @@ if [ -z "$1" ]; then
 fi
 
 echo "Shutting down DAFNE..."
-docker-compose down
+docker-compose down || echo "docker-compose command not found. Trying with docker compose instead.." && docker compose down
 
 echo "DAFNE stopped"
 
@@ -38,6 +38,6 @@ echo "cp -R data/dafne/* /data/dafne_${version}/"
 cp -R data/dafne/* /data/dafne_${version}/
 
 echo "Pull images..."
-docker-compose pull
+docker-compose pull || echo "docker-compose command not found. Trying with docker compose instead.." && docker compose pull
 
 echo "DAFNE environment ready!"
