@@ -8,7 +8,7 @@ echo "  ************************************************************************
 
 echo "  Starting DAFNE..."
 
-docker-compose up -d || echo "docker-compose command not found. Trying with docker compose instead.." && docker compose up -d
+docker-compose up -d || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose up -d; }
 
 return_code=$?
 
