@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   fe:
-    image: "collaborativedhs/dafne:fe-4.0.0"
+    image: "collaborativedhs/dafne:fe-4.1.0"
     container_name: fe
     hostname: frontend
     restart: always
@@ -17,7 +17,7 @@ services:
     depends_on:
       - be
   be:
-    image: "collaborativedhs/dafne:be-4.0.0"
+    image: "collaborativedhs/dafne:be-4.1.0"
     container_name: be
     hostname: backend
     restart: always
@@ -44,7 +44,7 @@ services:
   #  container_name: db
   #  hostname: dafne_db
   #  restart: always
-  #  image: "library/postgres:12.5"
+  #  image: "library/postgres:17"
   #  env_file:
   #    - /data/dafne/back-end/config/db_credentials.env
   #  networks:
