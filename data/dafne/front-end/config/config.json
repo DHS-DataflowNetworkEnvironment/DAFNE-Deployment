@@ -23,7 +23,7 @@
     "averageAvailabilityColor": "#00d0ff",
     "dataRefreshTime": 300000,
     "apiUrl": "<back-end-url>",
-    "version": "4.0.0",
+    "version": "4.1.0",
     "satelliteList": [
         {
             "name": "Sentinel-1",
