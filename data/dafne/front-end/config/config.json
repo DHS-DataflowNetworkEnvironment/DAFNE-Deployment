@@ -5,7 +5,7 @@
         "textSize": 12,
         "iconSize": 30
     },
-    "latencyColors": [
+    "timelinessColors": [
         {"threshold": 259200000, "color": "#ff0000"},
         {"threshold": 129600000, "color": "#ffc000"},
         {"threshold": 43200000, "color": "#ffff00"},
@@ -18,7 +18,7 @@
         {"threshold": 95.0, "color": "#ffff00"},
         {"threshold": 98.0, "color": "#92d050"},
         {"threshold": 99.0, "color": "#00b050"},
-        {"threshold": 100.0, "color": "#00b050"}        
+        {"threshold": 100.0, "color": "#00b050"}
     ],
     "averageAvailabilityColor": "#00d0ff",
     "dataRefreshTime": 300000,
@@ -37,7 +37,8 @@
             "platform": [
                 "A",
                 "B",
-                "A+B"
+                "C",
+                "ALL"
             ]
         },
         {
@@ -50,7 +51,8 @@
             "platform": [
                 "A",
                 "B",
-                "A+B"
+                "C",
+                "ALL"
             ]
         },
         {
@@ -75,12 +77,12 @@
                 "SR_2_LAN___",
                 "SR_2_LAN_SI",
                 "SR_2_LAN_HY",
-                "SR_2_LAN_LI"            
+                "SR_2_LAN_LI"
             ],
             "platform": [
                 "A",
                 "B",
-                "A+B"
+                "ALL"
             ]
         },
         {
@@ -119,4 +121,5 @@
             ]
         }
     ]
-}
+  }
+  
