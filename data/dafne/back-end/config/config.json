@@ -1,5 +1,5 @@
 {
-  "logger": {
+	"logger": {
 		"zippedArchive": false,
 		"dateFormat": "YYYY-MM-DD HH:mm:ss,SSS",
 		"maxSize": "50m",
@@ -26,7 +26,6 @@
 		"keycloakBaseUrl": "https://<keycloak_url>/auth/realms/dhus/protocol/openid-connect",
 		"clientId": "dafne",
 		"grantType": "password"
-
 	},
 	"availability": {
 		"schedule": "*/10 * * * *",
@@ -44,11 +43,14 @@
 		"feRetrySchedule": "*/5 * * * *",
 		"feMaxRetry": 10,
 		"tolerance": 1
-	  },
+	},
 	"requestTimeout": 30000,
-	"dataSourceStatus": ["RUNNING", "PENDING"],
+	"dataSourceStatus": [
+		"RUNNING",
+		"PENDING"
+	],
 	"version": "4.1.0",
-  "port": 2000,
+	"port": 2000,
 	"adminRole": "DATAFLOW_MANAGER",
 	"viewerRole": "DATAFLOW_VIEWER"
 }

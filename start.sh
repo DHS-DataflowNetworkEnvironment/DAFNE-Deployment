@@ -13,15 +13,15 @@ docker-compose up -d || { echo "docker-compose command not found. Trying with do
 return_code=$?
 
 if [ $return_code -eq 0 ]; then
-    echo "  Application started"
+  echo "  Application started"
 
-    echo "  You can check the application status by means of the following command:"
-    echo "  docker ps"
+  echo "  You can check the application status by means of the following command:"
+  echo "  docker ps"
 
-    echo "  You can check the application logs by means of the following commands:"
-    echo "  docker logs be -f"
-    echo "  docker logs fe -f"
-    echo "  docker logs db -f (only in case of dockerized DB)"
+  echo "  You can check the application logs by means of the following commands:"
+  echo "  docker logs be -f"
+  echo "  docker logs fe -f"
+  echo "  docker logs db -f (only in case of dockerized DB)"
 else
-    echo "  Application launching error!"
+  echo "  Application launching error!"
 fi
