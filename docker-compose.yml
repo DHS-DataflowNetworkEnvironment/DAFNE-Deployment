@@ -1,7 +1,7 @@
 version: '3'
 services:
   fe:
-    image: "aliaspace/dafne:fe-4.3.0"
+    image: "aliaspace/dafne:fe-4.3.1"
     container_name: fe
     hostname: frontend
     restart: always
@@ -16,7 +16,7 @@ services:
     depends_on:
       - be
   be:
-    image: "aliaspace/dafne:be-4.3.0"
+    image: "aliaspace/dafne:be-4.3.1"
     container_name: be
     hostname: backend
     restart: always
