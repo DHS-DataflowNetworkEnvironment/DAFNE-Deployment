@@ -1,11 +1,10 @@
 version: '3'
 services:
   fe:
-    image: "collaborativedhs/dafne:fe-4.1.1"
+    image: "aliaspace/dafne:fe-4.3.1"
     container_name: fe
     hostname: frontend
     restart: always
-    build: .
     ports:
       - "8080:80"
     networks:
@@ -17,12 +16,11 @@ services:
     depends_on:
       - be
   be:
-    image: "collaborativedhs/dafne:be-4.1.1"
+    image: "aliaspace/dafne:be-4.3.1"
     container_name: be
     hostname: backend
     restart: always
-    build: .
-    command: bash -c "npx sequelize-cli db:migrate && npm start"
+    command: sh ./start.sh
 
     ports:
       - "3000:2000"
@@ -56,7 +54,3 @@ services:
 networks:
     dafne:
       driver: bridge
-      ipam:
-        driver: default
-        config:
-          - subnet: 172.16.0.0/16

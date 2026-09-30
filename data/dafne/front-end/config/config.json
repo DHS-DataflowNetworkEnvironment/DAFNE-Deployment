@@ -55,8 +55,8 @@
   ],
   "averageAvailabilityColor": "#00d0ff",
   "dataRefreshTime": 300000,
-  "apiUrl": "<back-end-url>",
-  "version": "4.1.0",
+  "apiUrl": "http://<api-url>:<api-port>",
+  "version": "4.3.1",
   "satelliteList": [
     {
       "name": "Sentinel-1",
@@ -69,8 +69,8 @@
       ],
       "platform": [
         "A",
-        "B",
         "C",
+        "D",
         "ALL"
       ]
     },
